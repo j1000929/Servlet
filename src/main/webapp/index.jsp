@@ -13,11 +13,14 @@
 
 <jsp:include page="link.html" flush="false"/><!-- 한글 인코딩 해결 -->
 <body>
+
+
 <h1>Welcome to Login App by Cookie</h1>  
 	<h2>안녕하세요</h2>
 	<a href="login.jsp">Login</a>|  
 	<a href="LogoutServlet">Logout</a>|  
 	<a href="ProfileServlet">Profile</a>  
+
 	<footer>
 	<%=date.toString() %>
 	</footer>

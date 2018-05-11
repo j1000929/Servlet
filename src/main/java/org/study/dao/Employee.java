@@ -1,7 +1,5 @@
 package org.study.dao;
- enum Country{
-	 Korea, USA, UK, Misc
- }
+
 public class Employee {
 	
 	private int id;
@@ -33,11 +31,13 @@ public class Employee {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Country getCountry() {
-		return country;
+	public String getCountry() {
+		return country.name();
 	}
-	public void setCountry(Country country) {
-		this.country = country;
+	public void setCountry(String country) {
+		//this.country = country;
+		this.country = Country.valueOf(country);
+		
 	}
 	
 	

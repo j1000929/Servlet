@@ -9,9 +9,10 @@
 <jsp:include page="link.html" flush="false"/>
 
 <body>
+${error }
 	<h1>Add New Employee</h1>
 
-	<form action="saveServlet" method="post">  
+	<form action="SaveServlet" method="post">  
 		<table>
 			<tr>
 				<td>Name:</td><td><input type="text" name="name" >  </td>
@@ -26,10 +27,10 @@
 				<td>country:</td>
 				<td>
 				<select name="country" style="width:150px" >
-					<option>한국</option>
-					<option>USA</option>
-					<option>UK</option>
-					<option>기타</option>
+					<option value="Korea">한국</option>
+					<option value="USA">USA</option>
+					<option value="UK">UK</option>
+					<option value="Misc">기타</option>
 				</select> 
 				 </td>
 			</tr>

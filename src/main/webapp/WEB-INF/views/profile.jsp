@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="/link.html" flush="false"></jsp:include><!-- link.html은 루트에 있다. -->
-	<h1>Welcome, ${profile.name}</h1>  
-	<h3>Profile</h3>
-	<h4>${profile.desc}</h4>
+	<jsp:include page="/link.html" flush="false" />
+	<h2>Welcome, ${profile.name}</h2>
+	<h3>Profile </h3>
+	<h4>${profile.desc }</h4>
 </body>
 </html>

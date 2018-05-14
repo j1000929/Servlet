@@ -7,10 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="/link.html" flush="false"></jsp:include><!-- link.html은 루트에 있다. -->
-	<h1>Welcome, ${name}</h1>  
-	<form>
-		<input type="hidden" name="id" value="${id }">
-	</form>
+	<jsp:include page="/link.html" flush="false" />
+	<h2>Welcome, ${name}</h2>
+
 </body>
 </html>

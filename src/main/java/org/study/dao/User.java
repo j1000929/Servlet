@@ -2,45 +2,43 @@ package org.study.dao;
 
 public class User {
 
-		String id;
-		String password;
-		String name;
-		
-		public User(String id, String password) {
-			super();
-			this.id = id;
-			this.password = password;
-		}
+	String id;
+	String password;
+	String name;
 
-		public String getId() {
-			return id;
-		}
+	public User(String id, String password) {
+		super();
+		this.id = id;
+		this.password = password;
+	}
 
-		public void setId(String id) {
-			this.id = id;
-		}
+	public String getId() {
+		return id;
+	}
 
-		public String getPassword() {
-			return password;
-		}
+	public void setId(String id) {
+		this.id = id;
+	}
 
-		public void setPassword(String password) {
-			this.password = password;
-		}
+	public String getPassword() {
+		return password;
+	}
 
-		public String getName() {
-			return name;
-		}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-		public void setName(String name) {
-			this.name = name;
-		}
+	public String getName() {
+		return name;
+	}
 
-		@Override
-		public String toString() {
-			return "User [id=" + id + ", name=" + name + "]";
-		}
-		
-		
-		
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + "]";
+	}
+	
 }

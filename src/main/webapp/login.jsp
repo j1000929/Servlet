@@ -7,12 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	${error}<!-- Loing.java에서 request.serAttribute()한 key(error)의 value("당신의 아이디/비밀번호가 맞지 않습니다.")가 출력된다.  -->
-
+	${error}
 	<form action="LoginServlet" method="post">  
 		Id:<input type="text" name="id"><br>  
 		Password:<input type="password" name="password"><br>  
 		<input type="submit" value="login">  
-	</form>  
+	</form>
 </body>
 </html>

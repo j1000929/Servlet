@@ -1,12 +1,10 @@
 package org.study.dao;
 
 public class UserService {
-	
-	
 
-	public boolean isValidUser(User user) {//실제 존재하는 유저인지 확인
+	public boolean isValidUser(User user) {
 		
-		if(user.getPassword().equals("servlet")) {
+		if (user.getPassword().equals("servlet")) {
 			user.setName("이명박");
 			return true;
 		}
@@ -19,6 +17,7 @@ public class UserService {
 		
 		profile.setName("이명박");
 		profile.setDesc("다스는 누구의 것인가?");
+		
 		return profile;
 	}
 }

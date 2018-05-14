@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,29 +23,33 @@ public class ProfileServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+				throws ServletException, IOException {
 		
 		UserService service = new UserService();
-
+		
 		HttpSession session = request.getSession();
 		User user = (User)session.getAttribute("user");
 		
-		if(user != null) {
+		if (user != null) {
 			Profile profile = service.getProfile(user.getId());
 			request.setAttribute("profile", profile);
-			request.getRequestDispatcher("/WEB-INF/views/profile.jsp").forward(request, response);
-		}else {
-			request.setAttribute("error", "먼저 로그인을 하셔야합니다.");
+			request.getRequestDispatcher("/WEB-INF/views/profile.jsp")
+				.forward(request, response);
+		} else {
+			request.setAttribute("error", "먼저 로그인을 하셔야 합니다");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
 		
 		
+		
+		
 	}
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("ProfileServlet doPost");
-		doGet(request,response);
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		System.out.println("ProfileServlet doPost....");
+		doGet(request, response);
 	}
-
 
 }

@@ -1,5 +1,5 @@
 package org.study.dao;
 
-public enum Country{
-	 Korea, USA, UK, Misc
+public enum Country {
+	kor, USA, UK, Misc
 }
